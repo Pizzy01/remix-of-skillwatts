@@ -46,7 +46,7 @@ export const Footer = () => {
               </a>
               <div className="flex items-center gap-3 text-slate-400 text-sm">
                 <MapPin className="w-4 h-4" />
-                Dakar, Senegal
+                Niamey, Niger
               </div>
             </div>
           </div>
