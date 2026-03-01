@@ -51,7 +51,7 @@ export const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-white mb-6"
           >
-            Energy, Water & Agro-Infrastructure{" "}
+            Energy Infrastructure{" "}
             <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-300 bg-clip-text text-transparent">
               for Africa
             </span>
