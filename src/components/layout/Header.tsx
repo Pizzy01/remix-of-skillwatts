@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logoSkillwatts from "@/assets/logo_skillwatts.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -35,9 +36,7 @@ export const Header = () => {
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/25">
-              <Zap className="w-5 h-5 text-white" />
-            </div>
+            <img src={logoSkillwatts} alt="SkillWatts" className="h-9 w-9 rounded-lg object-contain" />
             <span className="text-lg font-bold text-white">
               Skill<span className="text-emerald-400">Watts</span>
             </span>
