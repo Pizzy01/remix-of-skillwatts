@@ -40,7 +40,7 @@ export const HeroSection = () => {
           >
             <span className="badge-premium">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              African Energy & Water Infrastructure
+              African Energy Infrastructure
             </span>
           </motion.div>
 
