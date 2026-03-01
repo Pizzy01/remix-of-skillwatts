@@ -1,5 +1,6 @@
-import { Zap, Mail, Phone, MapPin, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Mail, MapPin, Linkedin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoSkillwatts from "@/assets/logo_skillwatts.png";
 
 const footerLinks = {
   solutions: [
@@ -30,9 +31,7 @@ export const Footer = () => {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
+              <img src={logoSkillwatts} alt="SkillWatts" className="h-9 w-9 rounded-lg object-contain" />
               <span className="text-lg font-bold text-white">
                 Skill<span className="text-emerald-400">Watts</span>
               </span>
