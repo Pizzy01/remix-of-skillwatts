@@ -50,8 +50,8 @@ export const AboutSection = () => {
             Powering Africa's <span className="text-primary">Future</span>
           </h2>
           <p className="text-lead max-w-3xl mx-auto">
-            Founded in Dakar, SkillWatts brings together Africa's brightest energy 
-            experts with a shared mission: making clean energy accessible, 
+            Founded in Niamey, SkillWatts brings together Africa's brightest energy
+            experts with a shared mission: making clean energy accessible,
             affordable, and sustainable across the continent.
           </p>
         </motion.div>

@@ -1,20 +1,18 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const stats = [
-  { value: "50+", label: "PROJECTS DEPLOYED" },
-  { value: "15+", label: "AFRICAN COUNTRIES" },
-  { value: "100K+", label: "LIVES IMPACTED" },
-];
+import { useContent } from "@/contexts/ContentContext";
 
 export const HeroSection = () => {
+  const { content } = useContent();
+  const data = content.hero;
+
   return (
     <section className="hero-section relative min-h-screen flex items-center">
       {/* Background image with proper overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+          src={data.bgImage}
           alt="Solar panels in African landscape"
           className="w-full h-full object-cover"
           loading="eager"
@@ -40,7 +38,7 @@ export const HeroSection = () => {
           >
             <span className="badge-premium">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              African Energy Infrastructure
+              {data.badge}
             </span>
           </motion.div>
 
@@ -51,9 +49,9 @@ export const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-white mb-6"
           >
-            Energy Infrastructure{" "}
+            {data.title}{" "}
             <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-300 bg-clip-text text-transparent">
-              for Africa
+              {data.titleHighlight}
             </span>
             <span className="text-emerald-400">.</span>
           </motion.h1>
@@ -65,7 +63,7 @@ export const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-lead text-slate-300 max-w-2xl mx-auto mb-10"
           >
-            We build and operate solar, water, cold chain and industrial energy systems adapted to African realities.
+            {data.subtitle}
           </motion.p>
 
           {/* CTAs */}
@@ -76,12 +74,12 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Link to="/contact" className="btn-primary-hero group">
-              Start Your Project
+              {data.ctaPrimary}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link to="/solutions" className="btn-secondary-hero group">
               <Play className="w-4 h-4" />
-              Our Solutions
+              {data.ctaSecondary}
             </Link>
           </motion.div>
         </motion.div>
@@ -94,7 +92,7 @@ export const HeroSection = () => {
           className="mt-20 md:mt-28"
         >
           <div className="grid grid-cols-3 gap-6 md:gap-12 max-w-3xl mx-auto">
-            {stats.map((stat, index) => (
+            {data.stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useContent } from "@/contexts/ContentContext";
 
 export const HomeCTASection = () => {
+  const { content } = useContent();
+  const data = content.cta;
+
   return (
     <section className="section-padding bg-slate-950 relative overflow-hidden">
       {/* Background effects */}
@@ -17,19 +21,15 @@ export const HomeCTASection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-white mb-6">
-            Ready to Build Your Infrastructure Project?
-          </h2>
-          <p className="text-slate-400 text-lg mb-10">
-            Whether you're a government, NGO, business or community, we have the solutions and financing models to make your project happen.
-          </p>
+          <h2 className="text-white mb-6">{data.title}</h2>
+          <p className="text-slate-400 text-lg mb-10">{data.subtitle}</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 text-white font-semibold rounded-full hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/25"
             >
-              Start Your Project
+              {data.ctaPrimary}
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
@@ -37,7 +37,7 @@ export const HomeCTASection = () => {
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:bg-white/15 transition-colors backdrop-blur-sm"
             >
               <Phone className="w-5 h-5" />
-              Schedule a Call
+              {data.ctaSecondary}
             </Link>
           </div>
         </motion.div>

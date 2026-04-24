@@ -3,13 +3,13 @@ import { MapPin, Zap, Calendar } from "lucide-react";
 
 const projects = [
   {
-    title: "Senegal Solar Farm",
-    location: "Senegal",
+    title: "Niger Solar Farm",
+    location: "Niger",
     capacity: "30 MW",
     year: "2023",
     type: "Solar PV",
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    description: "Utility-scale solar project powering 50,000 households in rural Senegal.",
+    description: "Utility-scale solar project powering 50,000 households in rural Niger.",
   },
   {
     title: "Niger Hydro Rehabilitation",

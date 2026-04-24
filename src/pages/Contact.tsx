@@ -275,13 +275,13 @@ const Contact = () => {
                         projects@skillwatts.com
                       </a>
                       <a
-                        href="tel:+221000000000"
+                        href="tel:+22700000000"
                         className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                       >
                         <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                           <Phone className="w-5 h-5 text-primary" />
                         </div>
-                        +221 00 000 00 00
+                        +227 00 000 00 00
                       </a>
                       <div className="flex items-center gap-3 text-muted-foreground">
                         <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
