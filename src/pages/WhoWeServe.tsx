@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Building2, Heart, Wheat, Store, Factory, Users, ArrowRight, CheckCircle } from "lucide-react";
+import { Building2, Heart, Wheat, Store, Factory, Users, GraduationCap, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -100,6 +100,22 @@ const clientTypes = [
     ],
     models: ["Community ownership", "Pay-as-you-go", "Cooperative models"],
     image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80",
+  },
+  {
+    id: "universities",
+    icon: GraduationCap,
+    title: "Universities",
+    description: "We provide energy infrastructure solutions for university campuses and academic institutions across Africa.",
+    applications: [
+      "Campus solar systems",
+      "Backup power for labs",
+      "Student housing electrification",
+      "Solar water heating",
+      "Energy management systems",
+      "Research facility power",
+    ],
+    models: ["Public procurement", "PPP models", "Grant financing"],
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80",
   },
 ];
 

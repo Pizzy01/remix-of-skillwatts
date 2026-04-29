@@ -56,6 +56,16 @@ export const HeroSection = () => {
             <span className="text-emerald-400">.</span>
           </motion.h1>
 
+          {/* Slogan */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.38, duration: 0.6 }}
+            className="text-emerald-400 text-lg md:text-xl font-semibold tracking-widest uppercase mb-4"
+          >
+            Turning Skills Into Power
+          </motion.p>
+
           {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}

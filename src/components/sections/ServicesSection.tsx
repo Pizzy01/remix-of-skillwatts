@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { FileSearch, Eye, Lightbulb, GraduationCap, Handshake, ChevronLeft, ChevronRight } from "lucide-react";
+import { FileSearch, Eye, Lightbulb, GraduationCap, Handshake, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useCallback } from "react";
 
 const phases = [
@@ -71,6 +71,20 @@ const phases = [
       "Partenariats Internationaux",
       "Projets de Grande Envergure",
       "Alliances Stratégiques"
+    ]
+  },
+  {
+    number: 6,
+    icon: Zap,
+    name: "AUDIT",
+    title: "Audit Énergétique",
+    subtitle: "Diagnostic & Optimisation",
+    description: "Audit complet des installations énergétiques existantes pour identifier les pertes, optimiser les consommations et proposer des solutions d'amélioration.",
+    features: [
+      "Diagnostic Énergétique",
+      "Analyse des Consommations",
+      "Identification des Pertes",
+      "Plan d'Optimisation"
     ]
   },
 ];

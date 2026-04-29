@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Building2, Heart, Wheat, Store, Factory, Users, ArrowRight } from "lucide-react";
+import { Building2, Heart, Wheat, Store, Factory, Users, GraduationCap, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const clientTypes = [
@@ -38,6 +38,12 @@ const clientTypes = [
     title: "Communities & Villages",
     description: "Electricity, water and productive energy for rural areas.",
     color: "bg-emerald-500/10 text-emerald-500",
+  },
+  {
+    icon: GraduationCap,
+    title: "Universities",
+    description: "Energy infrastructure and solar systems for university campuses and academic institutions.",
+    color: "bg-indigo-500/10 text-indigo-500",
   },
 ];
 
