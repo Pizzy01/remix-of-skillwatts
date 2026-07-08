@@ -2,8 +2,15 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+// Fallbacks : si les variables d'environnement manquent (ex. build Netlify sans
+// les env vars), le site s'affiche quand même avec le contenu par défaut au lieu
+// de planter avec une page blanche. Les requêtes Supabase échoueront silencieusement.
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || "https://placeholder.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || "placeholder-key";
+
+if (!import.meta.env.VITE_SUPABASE_URL) {
+  console.warn("[SkillWatts] VITE_SUPABASE_URL manquant — contenu par défaut utilisé. Configurez les variables d'environnement dans Netlify.");
+}
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
