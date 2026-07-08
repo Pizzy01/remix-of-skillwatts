@@ -1,44 +1,17 @@
 import { motion } from "framer-motion";
 import { MapPin, Zap, Calendar } from "lucide-react";
 
-const projects = [
-  {
-    title: "Niger Solar Farm",
-    location: "Niger",
-    capacity: "30 MW",
-    year: "2023",
-    type: "Solar PV",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    description: "Utility-scale solar project powering 50,000 households in rural Niger.",
-  },
-  {
-    title: "Niger Hydro Rehabilitation",
-    location: "Niger",
-    capacity: "45 MW",
-    year: "2022",
-    type: "Hydropower",
-    image: "https://images.unsplash.com/photo-1669121926255-987977a30020?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    description: "Modernization of existing hydro infrastructure on the Niger River.",
-  },
-  {
-    title: "Kenya Wind Park",
-    location: "Kenya",
-    capacity: "60 MW",
-    year: "2023",
-    type: "Wind",
-    image: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    description: "Wind farm in the Turkana corridor supporting Kenya's green energy goals.",
-  },
-  {
-    title: "Ghana Microgrid Network",
-    location: "Ghana",
-    capacity: "5 MW",
-    year: "2024",
-    type: "Hybrid",
-    image: "https://images.unsplash.com/photo-1554050546-c125a25df013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    description: "Interconnected microgrid system serving remote communities.",
-  },
-];
+// NOTE : section non affichée pour l'instant — à activer quand SkillWatts aura
+// des références projets réelles à présenter. Ne jamais publier de projets fictifs.
+const projects: {
+  title: string;
+  location: string;
+  capacity: string;
+  year: string;
+  type: string;
+  image: string;
+  description: string;
+}[] = [];
 
 export const ProjectsSection = () => {
   return (

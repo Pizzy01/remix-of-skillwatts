@@ -3,113 +3,82 @@ import { Building2, Heart, Wheat, Store, Factory, Users, GraduationCap, ArrowRig
 import { Link } from "react-router-dom";
 
 const clientTypes = [
-  {
-    icon: Building2,
-    title: "Governments & Public Utilities",
-    description: "Rural electrification, water supply, public lighting, hospitals, schools.",
-    color: "bg-blue-500/10 text-blue-500",
-  },
-  {
-    icon: Heart,
-    title: "NGOs & Development Partners",
-    description: "Humanitarian, food security, water, climate and rural development projects.",
-    color: "bg-rose-500/10 text-rose-500",
-  },
-  {
-    icon: Wheat,
-    title: "Agribusinesses & Cooperatives",
-    description: "Cold storage, irrigation, agro-processing, solar drying for agriculture.",
-    color: "bg-amber-500/10 text-amber-500",
-  },
-  {
-    icon: Store,
-    title: "SMEs & Commercial Sites",
-    description: "Hotels, supermarkets, workshops, clinics, offices requiring reliable power.",
-    color: "bg-purple-500/10 text-purple-500",
-  },
-  {
-    icon: Factory,
-    title: "Industries & Mines",
-    description: "Hybrid solar + battery systems for cost reduction and reliability.",
-    color: "bg-slate-500/10 text-slate-500",
-  },
-  {
-    icon: Users,
-    title: "Communities & Villages",
-    description: "Electricity, water and productive energy for rural areas.",
-    color: "bg-emerald-500/10 text-emerald-500",
-  },
-  {
-    icon: GraduationCap,
-    title: "Universities",
-    description: "Energy infrastructure and solar systems for university campuses and academic institutions.",
-    color: "bg-indigo-500/10 text-indigo-500",
-  },
+  { icon: Building2, title: "Gouvernements & Services publics", description: "Électrification rurale, adduction d'eau potable, éclairage public, centres de santé, écoles." },
+  { icon: Heart, title: "ONG & Partenaires de développement", description: "Projets humanitaires, de sécurité alimentaire, d'accès à l'eau potable et de développement durable." },
+  { icon: Wheat, title: "Coopératives & Agro-industries", description: "Stockage frigorifique, irrigation solaire, agro-transformation et séchage de produits agricoles." },
+  { icon: Factory, title: "Industries & Exploitations minières", description: "Systèmes solaires hybrides et stockage d'énergie pour réduire les coûts d'exploitation et fiabiliser la production." },
+  { icon: Store, title: "Sites commerciaux & PME", description: "Hôtels, supermarchés, cliniques et ateliers nécessitant une énergie fiable et compétitive." },
+  { icon: Users, title: "Communautés & Municipalités", description: "Accès à l'électricité, à l'eau potable et énergie productive pour le développement local." },
 ];
 
 export const WhoWeServeSection = () => {
   return (
-    <section id="clients" className="section-padding bg-slate-50 dark:bg-slate-900/50">
-      <div className="container-premium">
+    <section id="clients" className="py-32 relative border-t border-white/5 bg-transparent">
+      <div className="container-premium relative z-10">
+        
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase text-primary bg-primary/10 rounded-full mb-4">
-            Our Clients
-          </span>
-          <h2 className="text-foreground mb-4">
-            Who We Serve
-          </h2>
-          <p className="text-lead max-w-2xl mx-auto">
-            SkillWatts designs different technical and financial models for each type of client.
-          </p>
-        </motion.div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-2xl"
+          >
+            <h2 className="text-4xl md:text-5xl text-white font-bold tracking-tighter mb-6">
+              L'ingénierie pour les <br />
+              <span className="text-white/60">secteurs critiques.</span>
+            </h2>
+            <p className="text-lg text-white/70 leading-relaxed">
+              SkillWatts conçoit des architectures techniques et financières sur mesure, adaptées à la réalité opérationnelle de chaque secteur.
+            </p>
+          </motion.div>
+          
+          <motion.div
+             initial={{ opacity: 0, x: 20 }}
+             whileInView={{ opacity: 1, x: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <Link
+              to="/who-we-serve"
+              className="inline-flex items-center gap-2 text-white/80 hover:text-white font-medium group transition-colors"
+            >
+              Découvrir nos cas d'études
+              <ArrowRight className="w-4 h-4 text-plasma transition-transform group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+        </div>
 
-        {/* Client Types Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Minimalist Tech Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white/5 rounded-3xl overflow-hidden border border-white/5">
           {clientTypes.map((client, index) => (
             <motion.div
               key={client.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow"
+              transition={{ delay: index * 0.1, duration: 0.8 }}
+              className="bg-obsidian-900 p-10 relative group hover:bg-[#0c0c0f] transition-colors duration-500"
             >
-              <div className={`w-12 h-12 rounded-xl ${client.color} flex items-center justify-center mb-4`}>
-                <client.icon className="w-6 h-6" />
+              {/* Scanline hover effect */}
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-plasma/5 to-transparent h-[200%] -translate-y-[100%] group-hover:translate-y-[50%] transition-transform duration-1000 ease-in-out pointer-events-none" />
+              
+              <div className="relative z-10">
+                <div className="w-12 h-12 mb-8 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white/70 group-hover:text-plasma group-hover:border-plasma/30 group-hover:bg-plasma/5 transition-all duration-300">
+                  <client.icon className="w-5 h-5" />
+                </div>
+                <h3 className="text-xl font-semibold text-white tracking-tight mb-3">
+                  {client.title}
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  {client.description}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {client.title}
-              </h3>
-              <p className="text-muted-foreground text-sm">
-                {client.description}
-              </p>
             </motion.div>
           ))}
         </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-center mt-12"
-        >
-          <Link
-            to="/who-we-serve"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-          >
-            Learn more about how we work with each sector
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

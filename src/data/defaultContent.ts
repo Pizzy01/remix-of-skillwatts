@@ -1,151 +1,155 @@
 export const defaultContent = {
   hero: {
-    badge: "African Energy Infrastructure",
-    title: "Energy Infrastructure",
-    titleHighlight: "for Africa",
+    badge: "TURNING SKILLS INTO POWER",
+    title: "L'ingénierie qui transforme les compétences",
+    titleHighlight: "en infrastructures durables.",
     subtitle:
-      "We build and operate solar, water, cold chain and industrial energy systems adapted to African realities.",
-    ctaPrimary: "Start Your Project",
-    ctaSecondary: "Our Solutions",
+      "Nous accompagnons les gouvernements, industriels, bailleurs et développeurs énergétiques dans la conception, l'exécution et l'exploitation d'infrastructures fiables adaptées aux réalités africaines.",
+    ctaPrimary: "Demander une étude",
+    ctaSecondary: "Découvrir nos expertises",
     bgImage:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
+      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
     stats: [
-      { value: "50+", label: "PROJECTS DEPLOYED" },
-      { value: "15+", label: "AFRICAN COUNTRIES" },
-      { value: "100K+", label: "LIVES IMPACTED" },
+      { value: "Moins de 25%", label: "d'accès à l'électricité dans certaines zones" },
+      { value: "5 à 6 kWh/m²/j", label: "de potentiel solaire disponible" },
+      { value: "+3,5%", label: "de croissance démographique" },
+      { value: "10+ ans", label: "de maintenabilité locale visée" },
     ],
   },
 
   solutions: {
-    badge: "What We Build",
-    title: "Integrated Infrastructure Systems",
+    badge: "Nos expertises",
+    title: "Systèmes d'infrastructures intégrés",
     subtitle:
-      "SkillWatts delivers infrastructure solutions in 6 critical sectors essential for Africa's development.",
-    ctaLabel: "Request a Technical Proposal",
+      "SkillWatts déploie des solutions d'infrastructure dans 6 secteurs critiques essentiels pour le développement de l'Afrique.",
+    ctaLabel: "Demander une proposition technique",
     items: [
       {
-        title: "Solar Mini-Grids",
+        title: "Mini-réseaux solaires",
         description:
-          "Electrification of rural and peri-urban areas through containerized or hybrid solar power plants.",
+          "Électrification des zones rurales et périurbaines grâce à des centrales solaires conteneurisées ou hybrides à travers l'Afrique de l'Ouest.",
         image:
-          "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80",
+          "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?w=800&q=80",
       },
       {
-        title: "Cold Storage & Cold Chain",
+        title: "Stockage et chaîne du froid",
         description:
-          "Solar-powered cold rooms and refrigerated containers for agriculture, fisheries and food markets.",
+          "Chambres froides et conteneurs réfrigérés alimentés par l'énergie solaire pour l'agriculture, la pêche et les marchés alimentaires africains.",
         image:
-          "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
+          "https://images.unsplash.com/photo-1595805244583-125dd1f211d0?w=800&q=80",
       },
       {
-        title: "Solar Water Pumping & Irrigation",
+        title: "Pompage solaire de l'eau",
         description:
-          "Solar pumping systems for farms, villages and agro-industrial sites.",
+          "Systèmes de pompage solaire à haut rendement pour les fermes, les villages sahéliens et les sites agro-industriels.",
         image:
-          "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
+          "https://images.unsplash.com/photo-1594818345462-1c6f47721869?w=800&q=80",
       },
       {
-        title: "Agro Processing & Solar Drying",
+        title: "Agro-transformation",
         description:
-          "Solar dryers and agro-processing units to reduce post-harvest losses and increase farmer income.",
+          "Séchoirs solaires et unités automatisées d'agro-transformation pour réduire les pertes post-récolte et augmenter les revenus des agriculteurs.",
         image:
-          "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80",
+          "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80",
       },
       {
-        title: "Clean Water Stations",
+        title: "Stations d'eau potable",
         description:
-          "Solar-powered water purification and distribution stations for villages, health centers and cities.",
+          "Stations de purification d'eau et d'osmose inverse alimentées par l'énergie solaire, adaptées aux communautés hors réseau.",
         image:
-          "https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=600&q=80",
+          "https://images.unsplash.com/photo-1518556855110-63ce643cefc1?w=800&q=80",
       },
       {
-        title: "Industrial & Commercial Solar",
+        title: "Solaire industriel et commercial",
         description:
-          "Hybrid solar + battery systems for hotels, factories, mines, hospitals and commercial buildings.",
+          "Systèmes hybrides solaires + batteries + micro-réacteurs pour hôtels, usines, mines et hôpitaux.",
         image:
-          "https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80",
+          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
       },
     ],
   },
 
   whyAfrica: {
-    badge: "The Challenge",
-    title: "Why Africa Needs SkillWatts",
+    badge: "LE DÉFI",
+    title: "L'Afrique possède l'énergie. Le défi est de la transformer durablement.",
     subtitle:
-      "Africa faces a massive infrastructure gap. We build solutions that directly address these challenges.",
+      "L'Afrique dispose d'un potentiel énergétique exceptionnel. Pourtant, des millions de personnes et d'entreprises restent confrontées à des coupures récurrentes, des coûts élevés et des infrastructures insuffisamment maintenues.",
     bottomText:
-      "SkillWatts builds infrastructure that directly addresses these challenges with scalable, bankable solutions.",
+      "Le véritable enjeu n'est pas uniquement de produire davantage d'énergie. Il consiste à concevoir, exploiter et maintenir des infrastructures capables de fonctionner durablement.",
+    citation: "Le besoin n'est pas l'énergie disponible. C'est la compétence locale pour la déployer, l'entretenir et l'optimiser.",
     challenges: [
       {
-        title: "Low electricity access",
-        description: "600+ million Africans lack reliable power in rural areas",
+        title: "Déficit énergétique",
+        description: "L'accès limité à l'électricité, les interruptions fréquentes et les coûts élevés affectent directement la croissance économique.",
       },
       {
-        title: "Population growth",
-        description:
-          "Africa's population will double by 2050, demanding massive infrastructure",
+        title: "Infrastructures vieillissantes",
+        description: "De nombreux équipements approchent de leur fin de vie opérationnelle, générant des pertes techniques élevées.",
       },
       {
-        title: "Huge solar potential",
-        description: "Africa receives more sunlight than any other continent",
+        title: "Faible efficacité énergétique",
+        description: "La surconsommation et le gaspillage d'énergie augmentent inutilement les dépenses d'exploitation (OPEX).",
       },
       {
-        title: "Post-harvest losses",
-        description:
-          "40% of food is lost due to lack of cold chain infrastructure",
+        title: "Maintenance insuffisante",
+        description: "L'absence de stratégies préventives et proactives provoque des défaillances répétitives et des arrêts coûteux.",
       },
       {
-        title: "Water scarcity",
-        description: "400+ million people lack access to safe drinking water",
+        title: "Déficit de compétences",
+        description: "Le manque d'expertise technique locale limite la capacité à exploiter et maintenir de manière autonome.",
+      },
+      {
+        title: "Solutions mal adaptées",
+        description: "L'importation de technologies conçues pour d'autres environnements sans adaptation engendre de la dépendance.",
       },
     ],
   },
 
   howItWorks: {
-    badge: "Our Process",
-    title: "How SkillWatts Works",
+    badge: "NOTRE PROCESSUS",
+    title: "Protocole de déploiement",
     subtitle:
-      "We manage the full project lifecycle from assessment to long-term operations.",
+      "Nous gérons l'intégralité du cycle de vie des projets, de l'évaluation initiale aux opérations à long terme.",
     steps: [
       {
         number: "01",
-        title: "Project Assessment",
+        title: "Évaluation du projet",
         description:
-          "Site analysis, energy/water needs, feasibility study and demand mapping.",
+          "Analyse du site, des besoins énergétiques et hydriques, étude de faisabilité et cartographie de la demande.",
       },
       {
         number: "02",
-        title: "System Design",
+        title: "Conception du système",
         description:
-          "Solar, storage, water and processing systems tailored to each project's specific requirements.",
+          "Systèmes solaires, de stockage, d'eau et de transformation adaptés aux exigences spécifiques de chaque projet.",
       },
       {
         number: "03",
-        title: "Financing & Structuring",
+        title: "Financement & Structuration",
         description:
-          "Pay-as-you-go, donor funding, public-private partnerships, or commercial models.",
+          "Modèles de paiement à l'usage, subventions, partenariats public-privé ou financements commerciaux.",
       },
       {
         number: "04",
-        title: "Deployment",
+        title: "Déploiement",
         description:
-          "Local assembly, installation, and commissioning with African workforce.",
+          "Assemblage local, installation et mise en service avec des équipes locales formées.",
       },
       {
         number: "05",
-        title: "Operation & Maintenance",
+        title: "Exploitation & Maintenance",
         description:
-          "Monitoring, servicing and performance guarantees for long-term success.",
+          "Suivi en temps réel, maintenance préventive et garanties de performance à long terme.",
       },
     ],
   },
 
   cta: {
-    title: "Ready to Build Your Infrastructure Project?",
+    title: "Construisons ensemble l'avenir énergétique de l'Afrique.",
     subtitle:
-      "Whether you're a government, NGO, business or community, we have the solutions and financing models to make your project happen.",
-    ctaPrimary: "Start Your Project",
-    ctaSecondary: "Schedule a Call",
+      "Que vous développiez une nouvelle infrastructure d'envergure, optimisiez un réseau industriel existant ou prépariez un programme ambitieux de formation technique, nos experts vous accompagnent.",
+    ctaPrimary: "Demander une étude",
+    ctaSecondary: "Contacter nos experts",
   },
 };
 

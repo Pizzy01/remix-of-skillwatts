@@ -8,35 +8,34 @@ export const HomeCTASection = () => {
   const data = content.cta;
 
   return (
-    <section className="section-padding bg-slate-950 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/50 via-slate-950 to-slate-950" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-3xl rounded-full" />
+    <section className="py-40 bg-transparent relative overflow-hidden">
+      {/* Ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-plasma/10 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="container-premium relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto"
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-4xl mx-auto"
         >
-          <h2 className="text-white mb-6">{data.title}</h2>
-          <p className="text-slate-400 text-lg mb-10">{data.subtitle}</p>
+          <h2 className="text-4xl md:text-6xl text-white font-bold tracking-tighter mb-8">{data.title}</h2>
+          <p className="text-xl text-white/70 mb-14 max-w-2xl mx-auto leading-relaxed">{data.subtitle}</p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 text-white font-semibold rounded-full hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/25"
+              className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform"
             >
               {data.ctaPrimary}
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:bg-white/15 transition-colors backdrop-blur-sm"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-white/[0.03] text-white font-medium rounded-full border border-white/10 backdrop-blur-xl hover:bg-white/[0.08] transition-all"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5 text-plasma" />
               {data.ctaSecondary}
             </Link>
           </div>

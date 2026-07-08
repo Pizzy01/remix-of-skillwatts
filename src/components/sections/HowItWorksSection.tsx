@@ -1,75 +1,80 @@
-import { motion } from "framer-motion";
-import { Search, PenTool, Wallet, Hammer, Settings } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useContent } from "@/contexts/ContentContext";
-
-const STEP_ICONS = [Search, PenTool, Wallet, Hammer, Settings];
 
 export const HowItWorksSection = () => {
   const { content } = useContent();
   const data = content.howItWorks;
+  const { scrollYProgress } = useScroll();
 
   return (
-    <section className="section-padding bg-background">
-      <div className="container-premium">
-        {/* Header */}
+    <section className="py-40 relative bg-transparent">
+      <div className="container-premium relative z-10">
+        
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-32"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase text-primary bg-primary/10 rounded-full mb-4">
-            {data.badge}
-          </span>
-          <h2 className="text-foreground mb-4">{data.title}</h2>
-          <p className="text-lead max-w-2xl mx-auto">{data.subtitle}</p>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-plasma" />
+            <span className="text-xs font-mono tracking-widest text-white/80 uppercase">
+              {data.badge}
+            </span>
+          </div>
+          <h2 className="text-5xl md:text-6xl text-white font-bold tracking-tighter mb-6">
+            {data.title}
+          </h2>
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            {data.subtitle}
+          </p>
         </motion.div>
 
-        {/* Steps */}
+        {/* The Circuit Timeline */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Connection line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20" />
+          {/* Central Glowing Line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-white/5 md:-translate-x-1/2" />
+          
+          <motion.div 
+            className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-plasma via-fusion to-reactor md:-translate-x-1/2" 
+            style={{ scaleY: scrollYProgress, transformOrigin: "top" }}
+          />
 
-          <div className="space-y-8 lg:space-y-0">
-            {data.steps.map((step, index) => {
-              const Icon = STEP_ICONS[index % STEP_ICONS.length];
-              return (
-                <motion.div
-                  key={step.title}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.15, duration: 0.5 }}
-                  className={`lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center ${
-                    index % 2 === 0 ? "" : "lg:direction-rtl"
-                  }`}
-                >
-                  <div
-                    className={`p-6 rounded-2xl bg-card border border-border shadow-sm ${
-                      index % 2 === 0 ? "lg:text-right" : "lg:order-1"
-                    }`}
-                  >
-                    <div className={`flex items-center gap-4 mb-3 ${index % 2 === 0 ? "lg:justify-end lg:flex-row-reverse" : ""}`}>
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                        <Icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <span className="text-4xl font-bold text-primary/20">{step.number}</span>
+          {data.steps.map((step, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className={`relative flex items-center mb-24 md:mb-32 ${
+                  isEven ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
+              >
+                {/* Connector Node */}
+                <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-obsidian-900 border-2 border-plasma md:-translate-x-1/2 shadow-[0_0_20px_rgba(0,229,255,0.8)] z-10" />
+
+                {/* Content Card */}
+                <div className={`w-full ml-20 md:ml-0 md:w-1/2 ${isEven ? "md:pr-20 text-left md:text-right" : "md:pl-20 text-left"}`}>
+                  <div className="group relative p-8 rounded-3xl bg-[#050505]/50 border border-white/5 backdrop-blur-md transition-all duration-500 hover:bg-[#0A0A0C] hover:border-plasma/30 hover:shadow-[0_0_40px_rgba(0,229,255,0.05)]">
+                    <div className="text-plasma font-mono text-sm tracking-widest mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
+                      PHASE {step.number}
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                    <h3 className="text-3xl font-bold text-white tracking-tight mb-4">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm">{step.description}</p>
+                    <p className="text-white/60 leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
-
-                  {/* Center dot for desktop */}
-                  <div className="hidden lg:flex items-center justify-center">
-                    <div className="w-4 h-4 rounded-full bg-primary shadow-lg shadow-primary/30" />
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

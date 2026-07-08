@@ -5,22 +5,26 @@ import { SolutionsOverviewSection } from "@/components/sections/SolutionsOvervie
 import { WhyAfricaSection } from "@/components/sections/WhyAfricaSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { WhoWeServeSection } from "@/components/sections/WhoWeServeSection";
+import { MarketSection } from "@/components/sections/MarketSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { HomeCTASection } from "@/components/sections/HomeCTASection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <Header />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <SolutionsOverviewSection />
         <WhyAfricaSection />
+        <MarketSection />
         <HowItWorksSection />
         <WhoWeServeSection />
+        <AboutSection />
         <HomeCTASection />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

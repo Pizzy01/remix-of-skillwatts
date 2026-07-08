@@ -37,14 +37,15 @@ export const PartnersSection = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-            Our Partners
+            Écosystème cible
           </span>
           <h2 className="mb-6">
-            Trusted by <span className="text-primary">Industry Leaders</span>
+            Les bailleurs et institutions <span className="text-primary">que nous visons</span>
           </h2>
           <p className="text-lead max-w-2xl mx-auto">
-            We collaborate with leading international organizations, 
-            development finance institutions, and governments across Africa.
+            SkillWatts se positionne comme partenaire local de confiance pour les
+            organisations internationales, bailleurs de fonds et gouvernements qui
+            financent l'énergie et les infrastructures en Afrique.
           </p>
         </motion.div>
 
