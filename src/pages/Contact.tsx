@@ -4,10 +4,16 @@ import { ArrowRight, Mail, MapPin, CheckCircle } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { useToast } from "@/hooks/use-toast";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const projectTypes = ["Études & ingénierie","Supervision & contrôle de chantier","Conseil & innovation","Formation & renforcement de capacités","Mini-réseau solaire","Pompage / traitement de l'eau","Agro-transformation","Autre"];
 
 const Contact = () => {
+  usePageMeta(
+    "Contact — Lancez votre projet | SkillWatts",
+    "Décrivez votre projet d'énergie ou d'infrastructure : SkillWatts analyse vos besoins et propose la solution technique et le modèle de financement adaptés. Réponse sous 48 h."
+  );
+
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ organization: "", country: "", projectType: "", size: "", budget: "", email: "", message: "" });

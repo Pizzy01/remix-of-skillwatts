@@ -3,6 +3,7 @@ import { Building2, Heart, Wheat, Store, Factory, Users, GraduationCap, ArrowRig
 import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const clientTypes = [
   { id: "governments", icon: Building2, title: "Gouvernements & Services publics", description: "Nous collaborons avec les gouvernements nationaux et locaux pour déployer des infrastructures publiques qui améliorent concrètement la qualité de vie des populations.", applications: ["Programmes d'électrification rurale", "Réseaux d'adduction d'eau potable", "Alimentation des hôpitaux et centres de santé", "Électrification des écoles", "Éclairage public solaire", "Périmètres irrigués villageois"], models: ["Marchés publics (Appels d'offres)", "Partenariats Public-Privé (PPP)", "Financements concessionnels"] },
@@ -15,6 +16,11 @@ const clientTypes = [
 ];
 
 const WhoWeServe = () => {
+  usePageMeta(
+    "Qui nous servons — Gouvernements, ONG, Industries, Communautés | SkillWatts",
+    "SkillWatts accompagne gouvernements, ONG, coopératives agricoles, industries minières, PME et communautés avec des solutions énergétiques et des modèles financiers adaptés à chaque secteur."
+  );
+
   return (
     <>
       <Header />

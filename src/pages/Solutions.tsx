@@ -3,6 +3,7 @@ import { Sun, Thermometer, Droplets, Leaf, GlassWater, Factory, ArrowRight, Chec
 import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const solutions = [
   {
@@ -92,6 +93,11 @@ const solutions = [
 ];
 
 const Solutions = () => {
+  usePageMeta(
+    "Nos Solutions — Mini-réseaux solaires, Eau potable, Chaîne du froid | SkillWatts",
+    "Mini-réseaux solaires, pompage de l'eau, stations d'eau potable, chaîne du froid, agro-transformation et solaire industriel : les solutions d'infrastructure SkillWatts pour l'Afrique."
+  );
+
   return (
     <>
       <Header />
