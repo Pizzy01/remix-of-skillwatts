@@ -65,6 +65,7 @@ export const SolutionsOverviewSection = () => {
                     alt={solution.title}
                     className="w-full h-full object-cover opacity-20 mix-blend-luminosity transition-transform duration-700 group-hover:scale-105 group-hover:opacity-30"
                     loading="lazy"
+                    onError={(e) => { e.currentTarget.style.display = "none"; }}
                   />
                   {/* Smooth gradient fade to black at the bottom */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/80 to-transparent" />

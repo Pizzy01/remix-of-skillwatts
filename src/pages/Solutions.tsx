@@ -149,6 +149,7 @@ const Solutions = () => {
                         src={solution.image}
                         alt={solution.title}
                         className="w-full h-full object-cover opacity-90 filter saturate-75 hover:saturate-100 hover:opacity-100 transition-all duration-700"
+                        onError={(e) => { e.currentTarget.style.display = "none"; }}
                       />
                     </div>
                     <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl flex items-center justify-center">
